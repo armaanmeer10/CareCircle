@@ -1,13 +1,27 @@
+import { lazy, Suspense, useSyncExternalStore } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { useSyncExternalStore } from 'react'
 import AppLayout from './components/AppLayout.jsx'
 import LiveNotice from './components/LiveNotice.jsx'
-import { AccessPage, RolePage } from './pages/AccessPages.jsx'
-import HomePage from './pages/HomePage.jsx'
-import { MedicineDetailPage, MedicinesPage } from './pages/MedicinesPage.jsx'
-import AppointmentsPage from './pages/AppointmentsPage.jsx'
-import { CareCirclePage, CaretakerDashboardPage, EmailPreviewPage, FamilyInsightsPage, MedicineHelperPage, ReminderSettingsPage, SettingsPage } from './pages/InsightsPages.jsx'
 import { storage } from './lib/storage.js'
+
+const lazyNamed = (load, name) => lazy(() => load().then((module) => ({ default: module[name] })))
+const AccessPage = lazyNamed(() => import('./pages/AccessPages.jsx'), 'AccessPage')
+const RolePage = lazyNamed(() => import('./pages/AccessPages.jsx'), 'RolePage')
+const HomePage = lazy(() => import('./pages/HomePage.jsx'))
+const MedicinesPage = lazyNamed(() => import('./pages/MedicinesPage.jsx'), 'MedicinesPage')
+const MedicineDetailPage = lazyNamed(() => import('./pages/MedicinesPage.jsx'), 'MedicineDetailPage')
+const AppointmentsPage = lazy(() => import('./pages/AppointmentsPage.jsx'))
+const CaretakerDashboardPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'CaretakerDashboardPage')
+const FamilyInsightsPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'FamilyInsightsPage')
+const CareCirclePage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'CareCirclePage')
+const ReminderSettingsPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'ReminderSettingsPage')
+const SettingsPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'SettingsPage')
+const EmailPreviewPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'EmailPreviewPage')
+const MedicineHelperPage = lazyNamed(() => import('./pages/InsightsPages.jsx'), 'MedicineHelperPage')
+
+function PageLoading() {
+    return <main className="page-content"><p className="loading-state" role="status" aria-live="polite">Loading your CareCircle page…</p></main>
+}
 
 const roleAccess = {
     '/dashboard': ['Caretaker'],
@@ -35,7 +49,7 @@ function AuthPage({ children }) {
 }
 
 export default function App() {
-    return <Routes>
+    return <Suspense fallback={<PageLoading />}><Routes>
         <Route path="/access" element={<AuthPage><AccessPage /></AuthPage>} />
         <Route path="/role" element={<AuthPage><RolePage /></AuthPage>} />
         <Route element={<ProtectedLayout />}>
@@ -53,5 +67,5 @@ export default function App() {
             <Route path="/medicine-question" element={<MedicineHelperPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    </Routes></Suspense>
 }

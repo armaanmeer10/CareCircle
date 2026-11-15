@@ -39,7 +39,7 @@ export default function AppLayout({ data, children }) {
         <div className="app-shell">
             <aside className={`sidebar ${menuOpen ? 'sidebar--open' : ''}`} aria-label="Main navigation">
                 <div className="sidebar-top"><Brand /><button className="icon-button sidebar-close" aria-label="Close navigation" onClick={() => setMenuOpen(false)}><X size={20} /></button></div>
-                <div className="sidebar-profile"><img src={elderPortrait} alt="Papa smiling" /><div><strong>{data.profile.name}</strong><span>Care plan</span></div><ShieldCheck size={18} aria-label="Care plan protected" /></div>
+                <div className="sidebar-profile"><img src={elderPortrait} alt="Papa smiling" width="42" height="42" /><div><strong>{data.profile.name}</strong><span>Care plan</span></div><ShieldCheck size={18} aria-label="Care plan protected" /></div>
                 <p className="nav-label">YOUR CARE</p>
                 <nav className="nav-list">{visibleLinks.map(({ to, label, icon: Icon }) => <NavLink key={to} to={to} className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`} onClick={() => setMenuOpen(false)}><Icon size={20} strokeWidth={1.8} /><span>{label}</span></NavLink>)}</nav>
                 <p className="nav-label nav-label--space">SUPPORT</p>
@@ -48,9 +48,9 @@ export default function AppLayout({ data, children }) {
             </aside>
             {menuOpen && <button className="sidebar-backdrop" onClick={() => setMenuOpen(false)} aria-label="Close navigation" />}
             <div className="main-column">
-                <header className="topbar"><button className="icon-button mobile-menu" onClick={() => setMenuOpen(true)} aria-label="Open navigation"><Menu size={22} /></button><div className="breadcrumbs"><span>CareCircle</span><span className="breadcrumb-divider">/</span><strong>{pageName}</strong></div><div className="topbar-actions"><div className="role-switcher-wrap"><button className="role-badge" aria-expanded={roleMenu} onClick={() => setRoleMenu(!roleMenu)}><span className="role-avatar">{role[0]}</span><span>{role}</span><ChevronDown size={16} /></button>{roleMenu && <div className="role-menu" role="menu">{['Elder', 'Caretaker', 'Family'].map((item) => <button key={item} role="menuitem" onClick={() => switchRole(item)}>{item}{item === role && <span aria-label="current role">✓</span>}</button>)}</div>}</div><img className="topbar-avatar" src={elderPortrait} alt="Papa profile" /></div></header>
+                <header className="topbar"><button className="icon-button mobile-menu" onClick={() => setMenuOpen(true)} aria-label="Open navigation"><Menu size={22} /></button><div className="breadcrumbs"><span>CareCircle</span><span className="breadcrumb-divider">/</span><strong>{pageName}</strong></div><div className="topbar-actions"><div className="role-switcher-wrap"><button className="role-badge" aria-expanded={roleMenu} onClick={() => setRoleMenu(!roleMenu)}><span className="role-avatar">{role[0]}</span><span>{role}</span><ChevronDown size={16} /></button>{roleMenu && <div className="role-menu" role="menu">{['Elder', 'Caretaker', 'Family'].map((item) => <button key={item} role="menuitem" onClick={() => switchRole(item)}>{item}{item === role && <span aria-label="current role">✓</span>}</button>)}</div>}</div><img className="topbar-avatar" src={elderPortrait} alt="Papa profile" width="42" height="42" /></div></header>
                 <main className="page-content">{children || <Outlet />}</main>
-                <footer className="app-footer"><span>Made with care, for care.</span><span>Need help? <a href="mailto:hello@carecircle.example">We’re here for you</a></span></footer>
+                <footer className="app-footer"><span>Made with care, for care.</span><span>Need help? <a href="mailto:hello@carecircle.example" rel="noopener noreferrer">We’re here for you</a></span></footer>
             </div>
         </div>
     )

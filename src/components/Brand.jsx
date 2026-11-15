@@ -1,5 +1,3 @@
-import { Heart } from 'lucide-react'
-
 export function Brand({ compact = false }) {
     return (
         <div className={`brand ${compact ? 'brand--compact' : ''}`} aria-label="CareCircle">

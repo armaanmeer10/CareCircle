@@ -25,7 +25,21 @@ describe('passcode and role access', () => {
         renderApp()
         await user.type(screen.getByLabelText('Your 6-digit passcode'), '111111')
         await user.click(screen.getByRole('button', { name: /continue/i }))
-        expect(await screen.findByText('That passcode didn’t match. Please try again.')).toBeInTheDocument()
+        expect(await screen.findByText(/That passcode didn’t match\. 4 attempts remaining\./)).toBeInTheDocument()
+    })
+
+    it('locks for sixty seconds after five incorrect attempts', async () => {
+        const user = userEvent.setup()
+        renderApp()
+        const input = screen.getByLabelText('Your 6-digit passcode')
+        const submit = screen.getByRole('button', { name: /continue/i })
+        for (let attempt = 0; attempt < 5; attempt += 1) {
+            if (attempt) await user.clear(input)
+            await user.type(input, '000000')
+            await user.click(submit)
+        }
+        expect(await screen.findByText(/Too many incorrect attempts\. Try again in \d+ seconds\./)).toBeInTheDocument()
+        expect(screen.getByRole('button', { name: /try again in 60s/i })).toBeDisabled()
     })
 
     it('opens role selection with the demo passcode and saves the chosen role', async () => {
@@ -35,7 +49,7 @@ describe('passcode and role access', () => {
         await user.click(screen.getByRole('button', { name: /continue/i }))
         await user.click(await screen.findByRole('button', { name: /i’m receiving care/i }))
         expect(storage.getSnapshot().profile.role).toBe('Elder')
-        expect(screen.getByRole('heading', { name: /good morning, papa/i })).toBeInTheDocument()
+        expect(await screen.findByRole('heading', { name: /good morning, papa/i })).toBeInTheDocument()
     })
 
     it('rejects malformed passcodes before checking the saved value', async () => {

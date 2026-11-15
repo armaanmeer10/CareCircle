@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Check, LockKeyhole, ShieldCheck, UsersRound } from 'lucide-react'
 import { Brand } from '../components/Brand.jsx'
 import { Button, Field } from '../components/UI.jsx'
 import { storage } from '../lib/storage.js'
+import { getDemoPasscode } from '../lib/security.js'
 
 const roles = [
     { name: 'Elder', title: 'I’m receiving care', description: 'A simple view of today, your medicines, and the people by your side.', icon: <HeartIcon /> },
@@ -14,16 +15,45 @@ const roles = [
 export function AccessPage() {
     const [passcode, setPasscode] = useState('')
     const [error, setError] = useState('')
+    const [busy, setBusy] = useState(false)
+    const [now, setNow] = useState(0)
     const navigate = useNavigate()
-    function submit(event) {
+    const lockedUntil = storage.getPasscodeLockout()
+    const secondsRemaining = Math.max(0, Math.ceil((lockedUntil - now) / 1000))
+
+    useEffect(() => {
+        if (!lockedUntil) return undefined
+        const timer = window.setInterval(() => setNow(Date.now()), 1000)
+        return () => window.clearInterval(timer)
+    }, [lockedUntil])
+
+    async function submit(event) {
         event.preventDefault()
+        if (secondsRemaining > 0 || busy) return
         if (!/^\d{6}$/.test(passcode)) { setError('Enter your 6-digit passcode.'); return }
-        if (!storage.verifyPasscode(passcode)) { setError('That passcode didn’t match. Please try again.'); return }
-        setError('')
-        storage.grantAccess()
-        navigate(storage.getSnapshot().profile.role ? '/home' : '/role')
+        setBusy(true)
+        try {
+            const result = await storage.verifyPasscode(passcode)
+            if (!result.ok) {
+                if (result.lockedUntil) {
+                    setNow(Date.now())
+                    setError('Too many incorrect attempts. Try again in 60 seconds.')
+                } else {
+                    setError(`That passcode didn’t match. ${result.attemptsRemaining} attempts remaining.`)
+                }
+                return
+            }
+            setError('')
+            storage.grantAccess()
+            navigate(storage.getSnapshot().profile.role ? '/home' : '/role')
+        } finally {
+            setBusy(false)
+        }
     }
-    return <main className="auth-screen"><div className="auth-decoration auth-decoration--one" /><div className="auth-decoration auth-decoration--two" /><section className="auth-card"><div className="auth-brand"><Brand /></div><div className="auth-icon"><LockKeyhole size={26} /></div><p className="eyebrow">A LITTLE HELP, A LOT OF HEART</p><h1>Care feels better<br />when we’re <span>together.</span></h1><p className="auth-copy">A calm, simple place to keep care connected. Welcome back.</p><form onSubmit={submit} className="auth-form"><Field id="passcode" label="Your 6-digit passcode" type="password" inputMode="numeric" autoComplete="one-time-code" maxLength={6} placeholder="••••••" value={passcode} onChange={(event) => { setPasscode(event.target.value.replace(/\D/g, '')); setError('') }} error={error} /><Button type="submit" size="lg" className="auth-submit">Continue <ArrowRight size={19} /></Button></form><div className="privacy-note"><ShieldCheck size={17} /><span>Your family’s care information stays private.</span></div><p className="demo-hint">Demo passcode: <strong>123456</strong></p></section><div className="auth-footer"><span>Made with care, for care.</span><span>Gentle support for every day.</span></div></main>
+    const passcodeError = secondsRemaining
+        ? `Too many incorrect attempts. Try again in ${secondsRemaining} seconds.`
+        : error.startsWith('Too many incorrect attempts.') ? '' : error
+    return <main className="auth-screen"><div className="auth-decoration auth-decoration--one" /><div className="auth-decoration auth-decoration--two" /><section className="auth-card"><div className="auth-brand"><Brand /></div><div className="auth-icon"><LockKeyhole size={26} /></div><p className="eyebrow">A LITTLE HELP, A LOT OF HEART</p><h1>Care feels better<br />when we’re <span>together.</span></h1><p className="auth-copy">A calm, simple place to keep care connected. Welcome back.</p><form onSubmit={submit} className="auth-form"><Field id="passcode" label="Your 6-digit passcode" type="password" inputMode="numeric" autoComplete="one-time-code" maxLength={6} placeholder="••••••" value={passcode} disabled={busy || secondsRemaining > 0} onChange={(event) => { setPasscode(event.target.value.replace(/\D/g, '')); setError('') }} error={passcodeError} /><Button type="submit" size="lg" className="auth-submit" disabled={busy || secondsRemaining > 0}>{busy ? 'Checking…' : secondsRemaining ? `Try again in ${secondsRemaining}s` : 'Continue'} <ArrowRight size={19} /></Button></form><div className="privacy-note"><ShieldCheck size={17} /><span>Your family’s care information stays private.</span></div><p className="demo-hint">Demo passcode: <strong>{getDemoPasscode()}</strong></p></section><div className="auth-footer"><span>Made with care, for care.</span><span>Gentle support for every day.</span></div></main>
 }
 
 export function RolePage() {
