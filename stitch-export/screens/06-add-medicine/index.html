@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f8f9ff", "on-error-container": "#93000a", "on-background": "#081d30", "surface": "#f8f9ff", "outline-variant": "#c1c7d0", "on-primary-fixed": "#001d32", "surface-container-high": "#dbe9ff", "primary": "#00446b", "on-error": "#ffffff", "surface-tint": "#1c6393", "primary-container": "#0f5c8c", "secondary-fixed-dim": "#7cdb8b", "inverse-surface": "#1f3246", "error-container": "#ffdad6", "surface-container-low": "#eef4ff", "on-secondary-container": "#067432", "tertiary-fixed-dim": "#ffb597", "secondary-fixed": "#98f8a5", "on-primary-fixed-variant": "#004a75", "primary-fixed-dim": "#94ccff", "on-secondary-fixed": "#002109", "surface-container-lowest": "#ffffff", "surface-variant": "#d1e4ff", "surface-dim": "#c9dcf7", "surface-bright": "#f8f9ff", "on-secondary-fixed-variant": "#005321", "on-surface": "#081d30", "tertiary": "#732900", "surface-container-highest": "#d1e4ff", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "error": "#ba1a1a", "primary-fixed": "#cde5ff", "on-primary-container": "#a5d3ff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "tertiary-fixed": "#ffdbcd", "on-surface-variant": "#41474f", "on-tertiary-container": "#ffc0a7", "inverse-primary": "#94ccff", "secondary": "#006e2e", "secondary-container": "#98f8a5", "outline": "#717880", "tertiary-container": "#993900", "on-tertiary-fixed-variant": "#7d2d00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.75rem", "gutter-sm": "1rem", "space-lg": "2rem", "space-xl": "3rem", "margin-sm": "1.25rem", "space-xs": "0.5rem", "margin": "2.5rem", "space-md": "1.25rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg": ["Atkinson Hyperlegible Next"], "title-medication": ["Atkinson Hyperlegible Next"], "headline-xl": ["Atkinson Hyperlegible Next"], "body-bold": ["Atkinson Hyperlegible Next"], "title-card": ["Atkinson Hyperlegible Next"], "label-button": ["Atkinson Hyperlegible Next"], "headline-lg-mobile": ["Atkinson Hyperlegible Next"], "headline-xl-mobile": ["Atkinson Hyperlegible Next"], "body-regular": ["Atkinson Hyperlegible Next"], "label-status": ["Atkinson Hyperlegible Next"] }, "fontSize": { "headline-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }], "title-medication": ["24px", { "lineHeight": "34px", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "52px", "fontWeight": "700" }], "body-bold": ["20px", { "lineHeight": "32px", "fontWeight": "700" }], "title-card": ["22px", { "lineHeight": "32px", "fontWeight": "700" }], "label-button": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "36px", "fontWeight": "700" }], "headline-xl-mobile": ["32px", { "lineHeight": "42px", "fontWeight": "700" }], "body-regular": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "label-status": ["20px", { "lineHeight": "26px", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface-container-lowest font-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low z-50 flex flex-col p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs mb-space-lg min-h-[56px] px-space-xs"><img alt="CareCircle Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDG10QJciKNzEEduZxXgQk7UhChvPTHUmqBtv0vPHrNQv6qR_8rJxHR3S4FbmFA7uX56EU_1h7qcIYJoI_Zpk2fUhwoJa14UH8-7QvAViVYE_QHFynTeoaPoxq9wWafggxefMnK1_9udSgIh321HEieMQfEmQ4tcSLFdc5pN1oyVPJ-q4gBEGTem_mC-FSaP23s3VC-oqGg7ymDWD-h7Q_PbYysyjtRv8JbVXqUZcY"/><span class="font-headline-lg text-headline-lg text-primary tracking-tight">CareCircle</span></div><nav class="flex-1 flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-body-bold shadow-[0_0_0_2px_#00446b]"><a class="flex items-center min-h-[56px] px-space-md rounded-xl font-body-bold text-body-bold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2" data-path="today" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">calendar_today</span>Today</a><a aria-current="page" class="flex items-center min-h-[56px] px-space-md rounded-xl focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 bg-primary-container text-on-primary font-body-bold shadow-[0_0_0_2px_#00446b]" data-path="medicines" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">medication</span>Medicines</a><a class="flex items-center min-h-[56px] px-space-md rounded-xl font-body-bold text-body-bold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2" data-path="appointments" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">schedule</span>Appointments</a><a class="flex items-center min-h-[56px] px-space-md rounded-xl font-body-bold text-body-bold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2" data-path="insights" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">insights</span>Insights</a><a class="flex items-center min-h-[56px] px-space-md rounded-xl font-body-bold text-body-bold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2" data-path="care-circle" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">group</span>Care Circle</a><a class="flex items-center min-h-[56px] px-space-md rounded-xl font-body-bold text-body-bold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2" data-path="settings" href="#"><span class="material-symbols-outlined mr-space-md text-[28px]">settings</span>Settings</a></nav><div class="mt-auto p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><span class="font-label-status text-label-status text-on-surface">Safe Mode</span><span class="material-symbols-outlined text-secondary text-[28px]">check_circle</span></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1100px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-xl min-h-[56px]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlQeyaCNESYudGk3x2IX7qvB6O4PGOdpzA9np0OjR_RayHLRjrW_hETOt-6BbD-LP4DKBqzi_sdP-Mak0pxh9w-SSlVdVcXCw6UbhgLwZECxQPts50EG7AgsVeXfA36L9GgIZFGbvUYVsG7ReEkgiWgXVIla8WCWJ7WAHTFDFzdBqa0Dxya9s_FjXofoh2vZB59JY4EkTkufpbIpa8N0dqhIpTwW-5TjO3D0Eqisg"/><div class="flex flex-col"><span class="font-label-status text-label-status text-on-surface-variant">Caring for</span><span class="font-title-card text-title-card text-on-surface">Papa</span></div></div><div class="flex items-center px-space-md min-h-[56px] bg-secondary-fixed text-on-secondary-fixed font-label-status text-label-status rounded-xl"><span class="material-symbols-outlined mr-space-xs text-[24px]">visibility</span>Elder View</div></div><div class="flex items-center gap-space-md"><div aria-label="Text Size Selector" class="flex items-center bg-surface-container-low rounded-xl p-space-xs gap-space-xs min-h-[56px]" role="group"><button aria-label="Decrease text size" class="min-h-[44px] min-w-[44px] px-space-sm rounded-lg font-label-button text-label-button text-on-surface hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="button">A-</button><button aria-label="Default text size" class="min-h-[44px] min-w-[44px] px-space-sm rounded-lg font-label-button text-label-button bg-primary text-on-primary focus:outline-none focus:ring-2 focus:ring-primary" type="button">A</button><button aria-label="Increase text size" class="min-h-[44px] min-w-[44px] px-space-sm rounded-lg font-label-button text-label-button text-on-surface hover:bg-surface-container-high hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="button">A+</button></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="max-w-[1100px] mx-auto px-gutter py-space-lg"><div class="flex flex-col w-full">
+<div class="mb-space-lg">
+<a class="inline-flex items-center min-h-[56px] px-space-xs text-primary font-body-bold text-body-bold hover:underline focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 rounded-xl transition-all" data-path="medicines" href="#">
+<span class="material-symbols-outlined mr-space-xs text-[28px]">arrow_back</span>
+      Back to Medicines
+    </a>
+<div class="mt-space-sm flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-status text-label-status text-on-surface-variant tracking-wide uppercase">New Prescription Intake</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mt-1">Add New Medicine for Papa</h1>
+<p class="font-body-regular text-body-regular text-on-surface-variant mt-2 max-w-2xl">
+          Choose how you would like to enter the prescription details:
+        </p>
+</div>
+<div class="bg-surface-container-high px-space-md py-space-sm rounded-xl flex items-center gap-space-sm shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">security</span>
+<span class="font-label-status text-label-status text-on-surface">Verified Caregiver Mode</span>
+</div>
+</div>
+</div>
+<section aria-label="Prescription Input Options" class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-space-xl">
+<!-- Option A: Scan Prescription -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all" id="option-scan-card" style="box-shadow: 0 0 0 2px #0f5c8c;">
+<div>
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">document_scanner</span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-status text-label-status px-space-sm py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">recommend</span>
+            Recommended
+          </span>
+</div>
+<h2 class="font-title-medication text-title-medication text-on-surface">Scan prescription bottle or paper</h2>
+<p class="font-body-regular text-body-regular text-on-surface-variant mt-space-xs">
+          Snap a photo with phone or upload prescription label. CareCircle AI reads the name, dose, and instructions automatically.
+        </p>
+<!-- Dropzone Area -->
+<div aria-label="Drop prescription image here or Browse files" class="mt-space-md bg-surface-container-low rounded-xl p-space-md text-center flex flex-col items-center justify-center min-h-[160px] cursor-pointer hover:bg-surface-container transition-colors group" role="button" tabindex="0">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-primary flex items-center justify-center mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add_a_photo</span>
+</div>
+<p class="font-body-bold text-body-bold text-on-surface">Drop image here or <span class="text-primary underline">Browse files</span></p>
+<span class="font-label-status text-label-status text-on-surface-variant text-sm mt-1">Supports high-res JPG, PNG, or PDF</span>
+</div>
+</div>
+<!-- Detection Status Banner -->
+<div class="mt-space-md bg-secondary-fixed/40 p-space-sm rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1">
+<span class="font-label-status text-label-status text-on-secondary-container block leading-tight">Label detected: Lisinopril 10mg</span>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm leading-tight">Details extracted into form below. You can edit any field.</span>
+</div>
+</div>
+</div>
+<!-- Option B: Type by hand -->
+<div aria-label="Type prescription details by hand" class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-container-high/60 transition-all cursor-pointer" id="option-manual-card" role="button" tabindex="0">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">edit_note</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-status text-label-status px-space-sm py-1 rounded-full">
+            Standard Entry
+          </span>
+</div>
+<h2 class="font-title-medication text-title-medication text-on-surface">Type it in myself</h2>
+<p class="font-body-regular text-body-regular text-on-surface-variant mt-space-xs">
+          Fill in the medicine name, dosage, and daily schedule by hand if you do not have a physical bottle or paper prescription.
+        </p>
+<!-- Informative Preview Box -->
+<div class="mt-space-md bg-surface-container-lowest/80 rounded-xl p-space-md">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">checklist</span>
+<span class="font-body-bold text-body-bold text-on-surface">What you'll need:</span>
+</div>
+<ul class="font-body-regular text-body-regular text-on-surface-variant space-y-1 pl-space-md list-disc">
+<li>Prescription bottle label or doctor's note</li>
+<li>Exact milligrams (mg) or milliliters (ml)</li>
+<li>Preferred timing with meals</li>
+</ul>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center text-primary font-body-bold text-body-bold">
+<span>Use manual entry form</span>
+<span class="material-symbols-outlined ml-space-xs text-[24px]">arrow_downward</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Review & Confirm Medicine Details -->
+<section aria-labelledby="form-heading" class="bg-surface-container-low rounded-2xl p-space-lg md:p-space-xl shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+<span class="font-label-status text-label-status text-primary uppercase">Step 2 of 2</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1" id="form-heading">Review & Confirm Medicine Details</h2>
+</div>
+<span class="font-label-status text-label-status text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full">
+        Prefilled via smart scanner
+      </span>
+</div>
+<form class="space-y-space-lg" onsubmit="event.preventDefault();">
+<!-- 1. Medicine Name & 2. Plain Language Explanation -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col">
+<label class="font-body-bold text-body-bold text-on-surface mb-space-xs" for="medicine-name">
+            1. Medicine Name <span aria-hidden="true" class="text-error">*</span>
+</label>
+<input aria-required="true" class="min-h-[56px] px-space-md bg-surface-container-lowest text-on-surface font-body-regular text-body-regular rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all" id="medicine-name" required="" style="box-shadow: 0 0 0 2px #081d30;" type="text" value="Lisinopril"/>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm mt-1">Generic or brand name as printed on label</span>
+</div>
+<div class="flex flex-col">
+<label class="font-body-bold text-body-bold text-on-surface mb-space-xs" for="medicine-purpose">
+            2. What it is for (Plain language)
+          </label>
+<input class="min-h-[56px] px-space-md bg-surface-container-lowest text-on-surface font-body-regular text-body-regular rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all" id="medicine-purpose" style="box-shadow: 0 0 0 2px #081d30;" type="text" value="Blood pressure & heart protection"/>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm mt-1">Displayed to Papa in simple, friendly words</span>
+</div>
+</div>
+<!-- 3. Dose & Shape -->
+<div class="flex flex-col">
+<label class="font-body-bold text-body-bold text-on-surface mb-space-xs" for="medicine-dose">
+          3. Dose & Visual Appearance <span aria-hidden="true" class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<div class="md:col-span-2">
+<input aria-required="true" class="w-full min-h-[56px] px-space-md bg-surface-container-lowest text-on-surface font-body-regular text-body-regular rounded-xl shadow-sm focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all" id="medicine-dose" required="" style="box-shadow: 0 0 0 2px #081d30;" type="text" value="1 Pink Round Tablet (10mg)"/>
+</div>
+<!-- Visual Helper Pill Chip -->
+<div class="min-h-[56px] px-space-md bg-surface-container-lowest rounded-xl flex items-center gap-space-sm shadow-sm">
+<span class="w-6 h-6 rounded-full bg-error-container shrink-0 flex items-center justify-center text-xs font-bold text-on-error-container">10</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface text-sm">Visual Verification</span>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-xs">Pink round tablet matched</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Time of Day (Radio Pills) -->
+<fieldset class="flex flex-col">
+<legend class="font-body-bold text-body-bold text-on-surface mb-space-xs">
+          4. Time of Day <span aria-hidden="true" class="text-error">*</span>
+</legend>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm mb-space-sm">Select when Papa should take this dosage:</span>
+<div aria-label="Prescription Schedule Timing" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" role="radiogroup">
+<!-- Option: Morning (Selected) -->
+<label class="relative flex items-center justify-between min-h-[64px] px-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all" style="box-shadow: 0 0 0 3px #00446b;">
+<input checked="" class="sr-only" name="time-of-day" type="radio" value="morning"/>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Morning</span>
+<span class="font-label-status text-label-status text-primary text-sm">8:00 AM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[26px]">radio_button_checked</span>
+</label>
+<!-- Option: Afternoon -->
+<label class="relative flex items-center justify-between min-h-[64px] px-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all" style="box-shadow: 0 0 0 1px #717880;">
+<input class="sr-only" name="time-of-day" type="radio" value="afternoon"/>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]">light_mode</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Afternoon</span>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm">1:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[26px]">radio_button_unchecked</span>
+</label>
+<!-- Option: Evening -->
+<label class="relative flex items-center justify-between min-h-[64px] px-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all" style="box-shadow: 0 0 0 1px #717880;">
+<input class="sr-only" name="time-of-day" type="radio" value="evening"/>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]">dark_mode</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Evening</span>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm">6:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[26px]">radio_button_unchecked</span>
+</label>
+<!-- Option: Bedtime -->
+<label class="relative flex items-center justify-between min-h-[64px] px-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all" style="box-shadow: 0 0 0 1px #717880;">
+<input class="sr-only" name="time-of-day" type="radio" value="bedtime"/>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]">bedtime</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Bedtime</span>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm">9:30 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[26px]">radio_button_unchecked</span>
+</label>
+</div>
+</fieldset>
+<!-- 5. Food Instruction & 6. Refill Reminder -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col">
+<label class="font-body-bold text-body-bold text-on-surface mb-space-xs" for="food-instruction">
+            5. Food & Drink Instructions
+          </label>
+<div class="relative">
+<select class="w-full min-h-[56px] px-space-md pr-12 bg-surface-container-lowest text-on-surface font-body-regular text-body-regular rounded-xl shadow-sm appearance-none focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all cursor-pointer" id="food-instruction" style="box-shadow: 0 0 0 2px #081d30;">
+<option selected="">Take with or after breakfast</option>
+<option>Take on an empty stomach</option>
+<option>Take with plenty of water (full 8oz glass)</option>
+<option>Take with dinner</option>
+<option>No specific food requirement</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[28px]">
+              expand_more
+            </span>
+</div>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm mt-1">Prevents stomach upset and ensures consistent absorption</span>
+</div>
+<div class="flex flex-col">
+<label class="font-body-bold text-body-bold text-on-surface mb-space-xs" for="refill-reminder">
+            6. Refill Alert for Care Circle
+          </label>
+<div class="relative">
+<select class="w-full min-h-[56px] px-space-md pr-12 bg-surface-container-lowest text-on-surface font-body-regular text-body-regular rounded-xl shadow-sm appearance-none focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all cursor-pointer" id="refill-reminder" style="box-shadow: 0 0 0 2px #081d30;">
+<option selected="">Alert family when 7 pills remain (Recommended)</option>
+<option>Alert family when 14 pills remain</option>
+<option>Alert family when 3 pills remain</option>
+<option>Do not send refill reminder</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[28px]">
+              notifications_active
+            </span>
+</div>
+<span class="font-body-regular text-body-regular text-on-surface-variant text-sm mt-1">Sends an automated SMS to all caretakers</span>
+</div>
+</div>
+<!-- Live Preview Pill Card for Papa's Dashboard -->
+<div class="mt-space-lg bg-surface-container-lowest rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-status text-label-status text-on-surface-variant uppercase">Preview: How Papa will see this daily</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-status text-label-status px-2 py-0.5 rounded text-xs">High Contrast Preview</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">medication</span>
+</div>
+<div>
+<h3 class="font-title-medication text-title-medication text-on-surface">Lisinopril — 10mg</h3>
+<p class="font-body-regular text-body-regular text-on-surface-variant">1 Pink Round Tablet • Blood pressure & heart protection</p>
+<p class="font-body-bold text-body-bold text-primary mt-1">Morning: 8:00 AM (Take with breakfast)</p>
+</div>
+</div>
+<button class="min-h-[56px] px-space-lg bg-secondary-fixed text-on-secondary-fixed font-label-button text-label-button rounded-xl flex items-center justify-center gap-space-xs opacity-90 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[24px]">check</span>
+            Log as Taken
+          </button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-lg flex flex-col-reverse md:flex-row items-center justify-end gap-space-md">
+<button class="w-full md:w-auto min-h-[64px] px-space-xl bg-surface-container-lowest text-primary font-label-button text-label-button rounded-xl hover:bg-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all flex items-center justify-center" onclick="window.history.back()" style="box-shadow: 0 0 0 2px #0f5c8c;" type="button">
+          Cancel
+        </button>
+<button class="w-full md:w-auto min-h-[64px] px-space-xl bg-primary-container text-on-primary font-label-button text-label-button rounded-xl hover:bg-primary focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 transition-all flex items-center justify-center gap-space-xs shadow-md" id="btn-save-medicine" type="submit">
+<span class="material-symbols-outlined text-[28px]">save</span>
+          Save Medicine to Papa's Schedule
+        </button>
+</div>
+</form>
+</section>
+<!-- Help & Support Callout -->
+<aside class="mb-space-xl bg-surface-container-high/50 rounded-xl p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<p class="font-body-bold text-body-bold text-on-surface">Need help deciphering a doctor's handwriting?</p>
+<p class="font-body-regular text-body-regular text-on-surface-variant text-sm">Call Papa's clinical support line directly or request pharmacy sync assistance.</p>
+</div>
+</div>
+<button class="min-h-[48px] px-space-md bg-surface-container-lowest text-primary font-label-status text-label-status rounded-xl hover:bg-surface-container transition-colors shrink-0" type="button">
+      Contact Pharmacist
+    </button>
+</aside>
+</div>
+<script>
+  (function initAddMedicineInteractions() {
+    const radioLabels = document.querySelectorAll('input[name="time-of-day"]');
+    
+    radioLabels.forEach(input => {
+      input.addEventListener('change', () => {
+        radioLabels.forEach(otherInput => {
+          const parentLabel = otherInput.closest('label');
+          const checkIcon = parentLabel.querySelector('.material-symbols-outlined:last-child');
+          const isSelected = otherInput.checked;
+          
+          if (isSelected) {
+            parentLabel.style.boxShadow = '0 0 0 3px #00446b';
+            checkIcon.textContent = 'radio_button_checked';
+            checkIcon.classList.remove('text-outline');
+            checkIcon.classList.add('text-primary');
+          } else {
+            parentLabel.style.boxShadow = '0 0 0 1px #717880';
+            checkIcon.textContent = 'radio_button_unchecked';
+            checkIcon.classList.remove('text-primary');
+            checkIcon.classList.add('text-outline');
+          }
+        });
+      });
+    });
+
+    const manualCard = document.getElementById('option-manual-card');
+    const scanCard = document.getElementById('option-scan-card');
+    
+    if (manualCard && scanCard) {
+      manualCard.addEventListener('click', () => {
+        manualCard.style.boxShadow = '0 0 0 2px #0f5c8c';
+        scanCard.style.boxShadow = 'none';
+        const nameInput = document.getElementById('medicine-name');
+        if (nameInput) {
+          nameInput.focus();
+        }
+      });
+
+      scanCard.addEventListener('click', () => {
+        scanCard.style.boxShadow = '0 0 0 2px #0f5c8c';
+        manualCard.style.boxShadow = 'none';
+      });
+    }
+
+    const saveBtn = document.getElementById('btn-save-medicine');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[28px]">refresh</span> Saving to Schedule...';
+        setTimeout(() => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[28px]">check_circle</span> Added to Papa\'s Morning Schedule!';
+          saveBtn.classList.remove('bg-primary-container');
+          saveBtn.classList.add('bg-secondary');
+        }, 800);
+      });
+    }
+  })();
+</script></div></main></div></body></html>

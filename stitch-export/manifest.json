@@ -1,0 +1,290 @@
+{
+  "project": "CareCircle Elderly Care Platform",
+  "stitch_project_id": "4529599254818582115",
+  "exported_at": "2026-11-15",
+  "total_screens": 16,
+  "screens": [
+    {
+      "number": 1,
+      "name": "CareCircle - Landing & Passcode Access",
+      "folder": "screens/01-landing-passcode-access",
+      "files": {
+        "html": "screens/01-landing-passcode-access/index.html",
+        "screenshot": "screens/01-landing-passcode-access/screenshot.png"
+      },
+      "purpose": "Landing screen and PIN entry for the app",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 2048 px",
+      "stitch_screen_id": "978d9534c6f44c87ab39b72d9c693932"
+    },
+    {
+      "number": 2,
+      "name": "CareCircle - Choose Your Role",
+      "folder": "screens/02-choose-your-role",
+      "files": {
+        "html": "screens/02-choose-your-role/index.html",
+        "screenshot": "screens/02-choose-your-role/screenshot.png"
+      },
+      "purpose": "Role selection screen (Elder / Caretaker / Family)",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 2048 px",
+      "stitch_screen_id": "bf47b9fa1a0042098750f866dea2ef89"
+    },
+    {
+      "number": 3,
+      "name": "CareCircle - Elder Home (Today)",
+      "folder": "screens/03-elder-home-today",
+      "files": {
+        "html": "screens/03-elder-home-today/index.html",
+        "screenshot": "screens/03-elder-home-today/screenshot.png"
+      },
+      "purpose": "Elder home view: today's medicines and I Took It button",
+      "roles": [
+        "Elder"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 3292 px",
+      "stitch_screen_id": "c39f603d9bcb4b24bf6b1560d19e1f68"
+    },
+    {
+      "number": 4,
+      "name": "CareCircle - Medicine List",
+      "folder": "screens/04-medicine-list",
+      "files": {
+        "html": "screens/04-medicine-list/index.html",
+        "screenshot": "screens/04-medicine-list/screenshot.png"
+      },
+      "purpose": "Full list of all medicines for the elder",
+      "roles": [
+        "Elder",
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 3908 px",
+      "stitch_screen_id": "a20590bac7e6433daed9723a7613844b"
+    },
+    {
+      "number": 5,
+      "name": "CareCircle - Medicine Detail",
+      "folder": "screens/05-medicine-detail",
+      "files": {
+        "html": "screens/05-medicine-detail/index.html",
+        "screenshot": "screens/05-medicine-detail/screenshot.png"
+      },
+      "purpose": "Detail view of a single medicine with status and history",
+      "roles": [
+        "Elder",
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 3612 px",
+      "stitch_screen_id": "e7df9d3f86cb4466b8b1c4e140292786"
+    },
+    {
+      "number": 6,
+      "name": "CareCircle - Add Medicine",
+      "folder": "screens/06-add-medicine",
+      "files": {
+        "html": "screens/06-add-medicine/index.html",
+        "screenshot": "screens/06-add-medicine/screenshot.png"
+      },
+      "purpose": "Form to add a new medicine (name, dose, schedule, reminders)",
+      "roles": [
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4604 px",
+      "stitch_screen_id": "d4db15d6682c41cd9f8d0f171373265a"
+    },
+    {
+      "number": 7,
+      "name": "CareCircle - Medicine Question (AI Helper)",
+      "folder": "screens/07-medicine-question-ai-helper",
+      "files": {
+        "html": "screens/07-medicine-question-ai-helper/index.html",
+        "screenshot": "screens/07-medicine-question-ai-helper/screenshot.png"
+      },
+      "purpose": "AI assistant chat for medicine-related questions",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 2864 px",
+      "stitch_screen_id": "872df524c53342edb242eef7a25ef317"
+    },
+    {
+      "number": 8,
+      "name": "CareCircle - Caretaker Dashboard",
+      "folder": "screens/08-caretaker-dashboard",
+      "files": {
+        "html": "screens/08-caretaker-dashboard/index.html",
+        "screenshot": "screens/08-caretaker-dashboard/screenshot.png"
+      },
+      "purpose": "Caretaker overview: adherence, alerts, and elder summary",
+      "roles": [
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4716 px",
+      "stitch_screen_id": "f549df4feb2d42ecabf64454396c6b90"
+    },
+    {
+      "number": 9,
+      "name": "CareCircle - Care Circle & Access",
+      "folder": "screens/09-care-circle-access",
+      "files": {
+        "html": "screens/09-care-circle-access/index.html",
+        "screenshot": "screens/09-care-circle-access/screenshot.png"
+      },
+      "purpose": "Manage care circle members and their access permissions",
+      "roles": [
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4328 px",
+      "stitch_screen_id": "d03c0d31a84f4d328fc7dc6421febd93"
+    },
+    {
+      "number": 10,
+      "name": "CareCircle - Appointments",
+      "folder": "screens/10-appointments",
+      "files": {
+        "html": "screens/10-appointments/index.html",
+        "screenshot": "screens/10-appointments/screenshot.png"
+      },
+      "purpose": "List of upcoming and past medical appointments",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 2956 px",
+      "stitch_screen_id": "9b3a97b3fc034677a17bae0032c5b968"
+    },
+    {
+      "number": 11,
+      "name": "CareCircle - Add or Edit Appointment",
+      "folder": "screens/11-add-edit-appointment",
+      "files": {
+        "html": "screens/11-add-edit-appointment/index.html",
+        "screenshot": "screens/11-add-edit-appointment/screenshot.png"
+      },
+      "purpose": "Form to create or edit a medical appointment",
+      "roles": [
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4904 px",
+      "stitch_screen_id": "3eb60d5f42804382bf258cb81229e310"
+    },
+    {
+      "number": 12,
+      "name": "CareCircle - Weekly Insights",
+      "folder": "screens/12-weekly-insights",
+      "files": {
+        "html": "screens/12-weekly-insights/index.html",
+        "screenshot": "screens/12-weekly-insights/screenshot.png"
+      },
+      "purpose": "Charts and stats on weekly medication adherence",
+      "roles": [
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4908 px",
+      "stitch_screen_id": "7cf4eadc7d8f459f9f77681493e662c9"
+    },
+    {
+      "number": 13,
+      "name": "CareCircle - Reminder Settings",
+      "folder": "screens/13-reminder-settings",
+      "files": {
+        "html": "screens/13-reminder-settings/index.html",
+        "screenshot": "screens/13-reminder-settings/screenshot.png"
+      },
+      "purpose": "Configure reminder channels, times, and escalation rules",
+      "roles": [
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 5408 px",
+      "stitch_screen_id": "20fcddefa5c84eb6acb60f328c619016"
+    },
+    {
+      "number": 14,
+      "name": "CareCircle - Email Reminder Preview",
+      "folder": "screens/14-email-reminder-preview",
+      "files": {
+        "html": "screens/14-email-reminder-preview/index.html",
+        "screenshot": "screens/14-email-reminder-preview/screenshot.png"
+      },
+      "purpose": "Preview of the email reminder sent to elder or family",
+      "roles": [
+        "Caretaker"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 4356 px",
+      "stitch_screen_id": "948a1d33bd22412c9a1a176de08cecc0"
+    },
+    {
+      "number": 15,
+      "name": "CareCircle - Settings & Accessibility",
+      "folder": "screens/15-settings-accessibility",
+      "files": {
+        "html": "screens/15-settings-accessibility/index.html",
+        "screenshot": "screens/15-settings-accessibility/screenshot.png"
+      },
+      "purpose": "App settings: font size, contrast, language, notifications",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 5394 px",
+      "stitch_screen_id": "a027454ce7de419e8e36d254a61a7ae6"
+    },
+    {
+      "number": 16,
+      "name": "CareCircle - Empty & Success States",
+      "folder": "screens/16-empty-success-states",
+      "files": {
+        "html": "screens/16-empty-success-states/index.html",
+        "screenshot": "screens/16-empty-success-states/screenshot.png"
+      },
+      "purpose": "Design sheet: empty states and success confirmation modals",
+      "roles": [
+        "Elder",
+        "Caretaker",
+        "Family"
+      ],
+      "device": "DESKTOP",
+      "canvas_size": "2560 x 2776 px",
+      "stitch_screen_id": "e0cacf51a9b7475f9e922366f0cb407a"
+    }
+  ],
+  "shared_assets": [
+    {
+      "file": "assets/elder-profile.jpg",
+      "description": "Shared portrait of Papa",
+      "reused_in_screens": 13,
+      "source": "Googleusercontent aida-public image referenced in the original Stitch HTML"
+    }
+  ],
+  "notes": "The shared CareCircle logo image could not be downloaded because its Googleusercontent URL redirects to Google sign-in. Original image references are retained in the extracted HTML."
+}
